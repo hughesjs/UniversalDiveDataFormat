@@ -2,7 +2,7 @@ using System.Xml.Serialization;
 using Shouldly;
 using UniversalDiveDataFormat.Models;
 
-namespace UniversalDiveDataFormat.Tests;
+namespace UniversalDiveDataFormat.Tests.Models;
 
 public class ManufacturerTests
 {

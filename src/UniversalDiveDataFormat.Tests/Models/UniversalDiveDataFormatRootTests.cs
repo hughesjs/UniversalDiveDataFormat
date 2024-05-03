@@ -2,7 +2,7 @@ using System.Xml.Serialization;
 using Shouldly;
 using UniversalDiveDataFormat.ExtensionMethods;
 
-namespace UniversalDiveDataFormat.Tests;
+namespace UniversalDiveDataFormat.Tests.Models;
 
 public class UniversalDiveDataFormatRootTests
 {
@@ -51,8 +51,8 @@ public class UniversalDiveDataFormatRootTests
 	[Fact]
 	public void CanDeserialize()
 	{
-		XmlSerializer serializer = new(typeof(Models.UniversalDiveDataFormatRoot));
-		Models.UniversalDiveDataFormatRoot uddf = serializer.Deserialize<Models.UniversalDiveDataFormatRoot>(Xml);
+		XmlSerializer serializer = new(typeof(UniversalDiveDataFormat.Models.UniversalDiveDataFormatRoot));
+		UniversalDiveDataFormat.Models.UniversalDiveDataFormatRoot uddf = serializer.Deserialize<UniversalDiveDataFormat.Models.UniversalDiveDataFormatRoot>(Xml);
 		
 		uddf.Version.ShouldBe("3.2.1");
 		uddf.Generator.ShouldNotBeNull();

@@ -21,7 +21,7 @@ public class Generator
 	public DateTime? DateTime { get; init; }
 
 	[XmlElement("link")]
-	public string? LinkId { get; init; }
+	public List<Link> Links { get; init; } = [];
 
 	[XmlElement("type")]
 	public SourceType? SourceType { get; init; }
@@ -42,8 +42,6 @@ public class GasDefinitions { }
 public class DiveSite { }
 
 public class Diver { }
-
-public class Business { }
 
 public class Maker { }
 
