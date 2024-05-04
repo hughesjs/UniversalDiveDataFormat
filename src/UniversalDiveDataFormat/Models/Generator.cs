@@ -26,23 +26,3 @@ public class Generator
 	[XmlElement("type")]
 	public SourceType? SourceType { get; init; }
 }
-
-public class DiveComputerControl { }
-
-public class DiveTrip { }
-
-public class TableGeneration { }
-
-public class ProfileData { }
-
-public class DecoModel { }
-
-public class GasDefinitions { }
-
-public class DiveSite { }
-
-public class Diver { }
-
-public class Maker { }
-
-public class MediaData { }

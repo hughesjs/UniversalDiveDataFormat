@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("shop")]
-public class Shop
+public class Shop: ILinkable
 {
 	[XmlAttribute("id")]
 	public required string Id { get; init; }
