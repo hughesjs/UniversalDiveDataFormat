@@ -29,12 +29,12 @@ public class UniversalDiveDataFormatRoot
 	
 	[XmlElement("gasdefinitions")]
 	public GasDefinitions? GasDefinitions { get; init; }
-	//
-	// [XmlElement("decomodel")]
-	// public DecoModel? DecoModel { get; init; }
-	//
-	// [XmlElement("profiledata")]
-	// public ProfileData? ProfileData { get; init; }
+	
+	[XmlElement("decomodel")]
+	public DecoModel? DecoModel { get; init; }
+	
+	[XmlElement("profiledata")]
+	public ProfileData? ProfileData { get; init; }
 	//
 	// [XmlElement("tablegeneration")]
 	// public required TableGeneration TableGeneration { get; init; }
@@ -46,9 +46,4 @@ public class UniversalDiveDataFormatRoot
 	// public DiveComputerControl? DiveComputerControl { get; init; }
 }
 
-[XmlRoot("gasdefinitions")]
-public class GasDefinitions
-{
-	[XmlElement("mix")]
-	public List<Mix> Mixes { get; init; } = [];
-}
+public class ProfileData { }
