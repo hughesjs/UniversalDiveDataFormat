@@ -22,17 +22,17 @@ public class UniversalDiveDataFormatRoot
 
 	[XmlElement("diver")]
 	public Diver? Diver { get; init; }
-	
-	
+
+
 	[XmlElement("divesite")]
 	public DiveSite? DiveSite { get; init; }
-	
+
 	[XmlElement("gasdefinitions")]
 	public GasDefinitions? GasDefinitions { get; init; }
-	
+
 	[XmlElement("decomodel")]
 	public DecoModel? DecoModel { get; init; }
-	
+
 	[XmlElement("profiledata")]
 	public ProfileData? ProfileData { get; init; }
 	//
@@ -45,5 +45,3 @@ public class UniversalDiveDataFormatRoot
 	// [XmlElement("divecomputercontrol")]
 	// public DiveComputerControl? DiveComputerControl { get; init; }
 }
-
-public class ProfileData { }
