@@ -8,7 +8,7 @@ namespace UniversalDiveDataFormat.Tests.Models;
 public class InstructorTests
 {
 	private const string Xml = """
-	                           <instructor id="di2_ijk>
+	                           <instructor id="di2_ijk">
 	                               <!-- description of dive instructor -->
 	                               <personal>
 	                                   <firstname>Ingo</firstname>

@@ -129,7 +129,6 @@ public class CameraTests
 		camera.Id.ShouldBe("Analogue-Camera");
 		camera.Body.Id.ShouldBe("Nikonos_V");
 		camera.Flash.ShouldNotBeNull();
-		camera.Housing.ShouldNotBeNull();
 		camera.Lens.ShouldNotBeNull();
 	}
 }

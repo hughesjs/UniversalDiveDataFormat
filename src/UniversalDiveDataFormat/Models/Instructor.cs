@@ -2,6 +2,7 @@ using System.Xml.Serialization;
 
 namespace UniversalDiveDataFormat.Models;
 
+[XmlRoot("instructor")]
 public class Instructor: ILinkable
 {
 	[XmlAttribute("id")]

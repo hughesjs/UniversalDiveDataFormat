@@ -16,7 +16,7 @@ public class EquipmentConfigurationTests
 	                                   <link ref="compass_1"/>
 	                                   <link ref="fins_1"/>
 	                                   <link ref="tank_1"/>
-	                               <equipmentconfiguration>
+	                               </equipmentconfiguration>
 	                           """;
 	
 	[Fact]
@@ -27,6 +27,6 @@ public class EquipmentConfigurationTests
 		
 		equipmentConfiguration.Id.ShouldBe("warmwassertauchen");
 		equipmentConfiguration.Name.ShouldBe("Standard-Warmwasserausrüstung");
-		equipmentConfiguration.Links.Count.ShouldBe(5);
+		equipmentConfiguration.Links.Count.ShouldBe(6);
 	}
 }

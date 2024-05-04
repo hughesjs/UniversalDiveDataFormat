@@ -16,7 +16,7 @@ public class DoctorTests
 	                                   <sex>male</sex>
 	                                   <birthdate>
 	                                       <!-- if date of birthdate known, it can be given here -->
-	                                   </birthdate
+	                                   </birthdate>
 	                               </personal>
 	                               <address>
 	                                   <street>Duddelstr. 34</street>

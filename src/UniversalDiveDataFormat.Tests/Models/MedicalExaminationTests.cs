@@ -18,7 +18,7 @@ public class MedicalExaminationTests
 	                                       <sex>male</sex>
 	                                       <birthdate>
 	                                           <!-- if date of birthdate is known, it can be given here -->
-	                                       </birthdate
+	                                       </birthdate>
 	                                   </personal>
 	                                   <address>
 	                                       <street>Duddelstr. 34</street>
@@ -35,7 +35,7 @@ public class MedicalExaminationTests
 	                               </doctor>
 	                               <examinationresult>passed</examinationresult>
 	                               <totallungcapacity>0.0059</totallungcapacity>
-	                               <vitalcapacity>0.0043</totallungcapacity>
+	                               <vitalcapacity>0.0043</vitalcapacity>
 	                               <notes>
 	                                   <para>
 	                                       Flatfeet seem to not affect diving ability. :-)

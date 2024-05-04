@@ -173,7 +173,7 @@ public class EquipmentTests
 	                                       <model>7070</model>
 	                                       <serialnumber>123789</serialnumber>
 	                                       <purchase>
-	                                           <datetime>2000-02-30</datetime>
+	                                           <datetime>2000-02-27</datetime>
 	                                           <price currency="EUR">500.00</price>
 	                                           <shop>Diveshop</shop>
 	                                       </purchase>
@@ -187,7 +187,7 @@ public class EquipmentTests
 	                                       <model>10-1000</model>
 	                                       <serialnumber>01928374</serialnumber>
 	                                       <purchase>
-	                                           <datetime>2000-02-30</datetime>
+	                                           <datetime>2000-02-27</datetime>
 	                                           <price currency="EUR">500.00</price>
 	                                           <shop>Diveshop</shop>
 	                                       </purchase>
@@ -203,7 +203,7 @@ public class EquipmentTests
 	                                   <serialnumber>12345</serialnumber>
 	                                   <purchase>
 	                                       <datetime>
-	                                           <!-- date of purchase of tank -->
+	                                          1995-01-10
 	                                       </datetime>
 	                                       <price currency="DM">250.00</price>
 	                                       <shop>
@@ -211,9 +211,7 @@ public class EquipmentTests
 	                                       </shop>
 	                                   </purchase>
 	                                   <nextservicedate>
-	                                       <datetime>
-	                                           <!-- date of next proof by safety standards authority -->
-	                                       </datetime>
+	                                       <datetime>2000-01-01</datetime>
 	                                   </nextservicedate>
 	                                   <tankmaterial>steel</tankmaterial>    <!-- steel tank -->
 	                                   <notes>
@@ -222,7 +220,20 @@ public class EquipmentTests
 	                                   </notes>
 	                               </tank>
 	                               <!-- here more tank descriptions can be inserted -->
-	                               <!-- here more other descriptions can appear -->
+	                               <compass id="compass_1"/>
+	                               <compressor id="compressor_1"/>
+	                               <divecomputer id="divecomputer_1"/>
+	                               <fins id="fins_1"/>
+	                               <gloves id="gloves_1"/>
+	                               <knife id="knife_1"/>
+	                               <light id="light_1"/>
+	                               <mask id="mask_1"/>
+	                               <rebreather id="rebreather_1"/>
+	                               <regulator id="regulator_1"/>
+	                               <scooter id="scooter_1"/>
+	                               <suit id="suit_1"/>
+	                               <videocamera id="videocamera_1"/>
+	                               <watch id="watch_1"/>
 	                           </equipment>
 	                                           
 	                           """;
@@ -235,7 +246,7 @@ public class EquipmentTests
 		
 		equipment.BuoyancyControlDevices.Count.ShouldBe(1);
 		equipment.Boots.Count.ShouldBe(1);
-		equipment.Cameras.Count.ShouldBe(1);
+		equipment.Cameras.Count.ShouldBe(2);
 		equipment.Compasses.Count.ShouldBe(1);
 		equipment.Compressors.Count.ShouldBe(1);
 		equipment.DiveComputers.Count.ShouldBe(1);

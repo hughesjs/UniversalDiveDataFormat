@@ -5,7 +5,7 @@ namespace UniversalDiveDataFormat.Models;
 [XmlRoot("examination")]
 public class MedicalExamination
 {
-	[XmlElement("datatime")]
+	[XmlElement("datetime")]
 	public DateTime? DateTime { get; init; }
 	
 	[XmlElement("doctor")]
