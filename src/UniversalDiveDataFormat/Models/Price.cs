@@ -14,3 +14,6 @@ public class Price
 
 [XmlRoot("priceperdive")]
 public class PricePerDive : Price;
+
+[XmlRoot("priceperlitre")]
+public class PricePerLiter : Price;
