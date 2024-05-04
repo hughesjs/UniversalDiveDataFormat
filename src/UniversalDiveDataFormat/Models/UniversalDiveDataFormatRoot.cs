@@ -20,8 +20,9 @@ public class UniversalDiveDataFormatRoot
 	[XmlElement("business")]
 	public Business? Business { get; init; }
 
-	// [XmlElement("diver")]
-	// public Diver? Diver { get; init; }
+	[XmlElement("diver")]
+	public Diver? Diver { get; init; }
+	
 	//
 	// [XmlElement("divesite")]
 	// public DiveSite? DiveSite { get; init; }
