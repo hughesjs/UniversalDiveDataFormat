@@ -23,9 +23,9 @@ public class UniversalDiveDataFormatRoot
 	[XmlElement("diver")]
 	public Diver? Diver { get; init; }
 	
-	//
-	// [XmlElement("divesite")]
-	// public DiveSite? DiveSite { get; init; }
+	
+	[XmlElement("divesite")]
+	public DiveSite? DiveSite { get; init; }
 	//
 	// [XmlElement("gasdefinitions")]
 	// public GasDefinitions? GasDefinitions { get; init; }
