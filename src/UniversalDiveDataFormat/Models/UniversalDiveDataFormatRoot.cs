@@ -14,8 +14,8 @@ public class UniversalDiveDataFormatRoot
 	[XmlElement("mediadata")]
 	public MediaData? MediaData { get; init; }
 
-	// [XmlElement("maker")]
-	// public Maker? Maker { get; init; }
+	[XmlElement("maker")]
+	public Maker? Maker { get; init; }
 
 	[XmlElement("business")]
 	public Business? Business { get; init; }
