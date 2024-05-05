@@ -37,9 +37,9 @@ public class UniversalDiveDataFormatRoot
 	
 	[XmlElement("tablegeneration")]
 	public required TableGeneration TableGeneration { get; init; }
-	//
-	// [XmlElement("divetrip")]
-	// public DiveTrip? DiveTrip { get; init; }
+	
+	[XmlElement("divetrip")]
+	public DiveTrips? DiveTrip { get; init; }
 	//
 	// [XmlElement("divecomputercontrol")]
 	// public DiveComputerControl? DiveComputerControl { get; init; }
