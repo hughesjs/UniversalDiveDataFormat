@@ -9,6 +9,7 @@ public class TableTests
 {
 	private const string Xml = """
 	                           <table id="decotable_nitrox4060_0m">
+	                               <title>Table for Sealevel - Nitrox 40/60</title>
 	                               <!-- cross reference to a previous dive ("dive500"); on basis of the tissue -->
 	                               <!-- saturation due to this previous dive now the table is to be generated -->
 	                               <link ref="dive500"/>
@@ -69,7 +70,7 @@ public class TableTests
 		XmlSerializer serializer = new(typeof(Table));
 		Table table = serializer.Deserialize<Table>(Xml);
 		table.Id.ShouldBe("decotable_nitrox4060_0m");
-		table.Links.Count.ShouldBe(1);
+		table.Links.Count.ShouldBe(2);
 		table.ApplicationData.ShouldBeNull();
 		table.TableScope.ShouldNotBeNull();
 		table.DecoModel.ShouldNotBeNull();

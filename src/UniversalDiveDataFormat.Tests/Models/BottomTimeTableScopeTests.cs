@@ -40,11 +40,11 @@ public class BottomTimeTableScopeTests
 		bottomTimeTableScope.DiveDepthBeginInMeters.ShouldBe(5.0f);
 		bottomTimeTableScope.DiveDepthEndInMeters.ShouldBe(60.0f);
 		bottomTimeTableScope.DiveDepthStepInMeters.ShouldBe(5.0f);
-		bottomTimeTableScope.TankPressureBeginInPascal.ShouldBe(200.0e7f);
-		bottomTimeTableScope.TankPressureReserveInPascal.ShouldBe(40.0e6f);
-		bottomTimeTableScope.TankVolumeBeginInCubicMeters.ShouldBe(10.0f);
-		bottomTimeTableScope.TankVolumeEndInCubicMeters.ShouldBe(20.0f);
-		bottomTimeTableScope.TankVolumeStepInCubicMeters.ShouldBe(5.0f);
+		bottomTimeTableScope.TankPressureBeginInPascal.ShouldBe(2e7f);
+		bottomTimeTableScope.TankPressureReserveInPascal.ShouldBe(4.0e6f);
+		bottomTimeTableScope.TankVolumeBeginInCubicMeters.ShouldBe(0.01f);
+		bottomTimeTableScope.TankVolumeEndInCubicMeters.ShouldBe(0.02f);
+		bottomTimeTableScope.TankVolumeStepInCubicMeters.ShouldBe(0.005f);
 	}
 
 }

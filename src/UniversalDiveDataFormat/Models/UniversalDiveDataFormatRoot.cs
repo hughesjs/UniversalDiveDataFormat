@@ -40,7 +40,7 @@ public class UniversalDiveDataFormatRoot
 	
 	[XmlElement("divetrip")]
 	public DiveTrips? DiveTrip { get; init; }
-	//
-	// [XmlElement("divecomputercontrol")]
-	// public DiveComputerControl? DiveComputerControl { get; init; }
+	
+	[XmlElement("divecomputercontrol")]
+	public DiveComputerControl? DiveComputerControl { get; init; }
 }

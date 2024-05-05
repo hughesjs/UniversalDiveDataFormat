@@ -9,6 +9,7 @@ public class BottomTimeTableTests
 {
 	private const string Xml = """
 	                           <bottomtimetable id="max_bottime_table_air_0m">
+	                               <title>Kai's Maximal Bottom Time Table for sea level</title>
 	                               <!-- reference to the prior calculated dive table as a basis -->
 	                               <!-- to calculate now the "maximum bottom time table" -->
 	                               <link ref="divetable_air_0m"/>

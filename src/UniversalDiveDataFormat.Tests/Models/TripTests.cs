@@ -44,7 +44,7 @@ public class TripTests
 	                                   </geography>
 	                                   <accommodation>
 	                                       <name>Camping Corse</name>
-	                                       <category>Camping</category>
+	                                       <category>camping</category>
 	                                       <contact>
 	                                           <email>info@camping-corse.com</email>
 	                                           <homepage>http://www.camping-corse.com</homepage>
@@ -63,7 +63,7 @@ public class TripTests
 	                                       <link ref="video_corse2005"/>
 	                                   </notes>
 	                               </trippart>
-	                           </trip">
+	                           </trip>
 	                           """;
 	
 	[Fact]

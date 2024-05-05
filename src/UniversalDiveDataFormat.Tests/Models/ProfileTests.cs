@@ -54,7 +54,7 @@ public class ProfileTests
 	                                       <waypoint>
 	                                           <depth>85.0</depth>
 	                                           <switchmix ref="trimix"/>
-	                                       <(waypoint>
+	                                       </waypoint>
 	                                       <waypoint>
 	                                           <depth>40.0</depth>
 	                                           <switchmix ref="noaa1"/>

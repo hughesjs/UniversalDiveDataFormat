@@ -63,7 +63,7 @@ public class MixChangeTests
 	{
 		XmlSerializer serializer = new(typeof(MixChange));
 		MixChange mixChange = serializer.Deserialize<MixChange>(Xml);
-		mixChange.Ascent.Waypoints.Count.ShouldBe(6);
-		mixChange.Descent!.Waypoints.Count.ShouldBe(6);
+		mixChange.Ascent.Waypoints.Count.ShouldBe(5);
+		mixChange.Descent!.Waypoints.Count.ShouldBe(5);
 	}
 }

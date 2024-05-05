@@ -53,6 +53,6 @@ public class InputProfileTests
 	{
 		XmlSerializer serializer = new(typeof(InputProfile));
 		InputProfile inputProfile = serializer.Deserialize<InputProfile>(Xml);
-		inputProfile.Waypoints.Count.ShouldBe(6);
+		inputProfile.Waypoints.Count.ShouldBe(7);
 	}
 }

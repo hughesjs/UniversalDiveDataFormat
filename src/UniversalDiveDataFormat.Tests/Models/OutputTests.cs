@@ -16,9 +16,7 @@ public class OutputTests
 	                               <!-- it is specified through the output format in the line above -->
 	                               <filename>kais_tab1</filename>
 	                               <headline>Kai_s Special Decompression Table</headline>
-	                               <remark>
-	                                   The best decompression table ever generated!!! ;-)
-	                               </remark>
+	                               <remark>The best decompression table ever generated!!! ;-)</remark>
 	                           </output>
 	                           """;
 	
