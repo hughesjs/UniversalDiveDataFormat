@@ -22,8 +22,7 @@ public class UniversalDiveDataFormatRoot
 
 	[XmlElement("diver")]
 	public Diver? Diver { get; init; }
-
-
+	
 	[XmlElement("divesite")]
 	public DiveSite? DiveSite { get; init; }
 
@@ -35,9 +34,9 @@ public class UniversalDiveDataFormatRoot
 
 	[XmlElement("profiledata")]
 	public ProfileData? ProfileData { get; init; }
-	//
-	// [XmlElement("tablegeneration")]
-	// public required TableGeneration TableGeneration { get; init; }
+	
+	[XmlElement("tablegeneration")]
+	public required TableGeneration TableGeneration { get; init; }
 	//
 	// [XmlElement("divetrip")]
 	// public DiveTrip? DiveTrip { get; init; }
