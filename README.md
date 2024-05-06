@@ -1,5 +1,5 @@
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/hughesjs/UniversalDiveDataFormat/dotnet-ci.yml?label=BUILD%20CI&style=for-the-badge&branch=master)](https://github.com/hughesjs/UniversalDiveDataFormat/actions)
-[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/hughesjs/UniversalDiveDataFormat/dotnet-cd.yml?label=BUILD%20CD&style=for-the-badge&branch=master)](https://github.com/hughesjs/UniversalDiveDataFormat/actions)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/hughesjs/UniversalDiveDataFormat/dotnet-ci.yml?label=BUILD%20CI&style=for-the-badge&branch=main)](https://github.com/hughesjs/UniversalDiveDataFormat/actions)
+[![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/hughesjs/UniversalDiveDataFormat/dotnet-cd.yml?label=BUILD%20CD&style=for-the-badge&branch=main)](https://github.com/hughesjs/UniversalDiveDataFormat/actions)
 [![Nuget (with prereleases)](https://img.shields.io/nuget/vpre/UniversalDiveDataFormat?style=for-the-badge)](https://nuget.org/packages/UniversalDiveDataFormat)
 ![GitHub top language](https://img.shields.io/github/languages/top/hughesjs/UniversalDiveDataFormat?style=for-the-badge)
 [![GitHub](https://img.shields.io/github/license/hughesjs/UniversalDiveDataFormat?style=for-the-badge)](LICENSE)
