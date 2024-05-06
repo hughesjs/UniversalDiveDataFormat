@@ -184,5 +184,18 @@ public class UddfDeserialiserTests
 			Image image = _uddfDeserialiser.Deserialise<Image>(xml);
 			image.Id.ShouldBe("img_flatfeet");
 			image.ObjectName.ShouldBe("flatfeet.jpg");
-		}	
+		}
+		
+		[Fact]
+		public void CanDeserialiseWithNamespace()
+		{
+			const string xml = """
+								<uddf version="3.2.0" xmlns="http://www.streit.cc/uddf/3.2/">
+									<mediadata>
+
+									</mediadata>
+								</uddf>
+								""";
+			Should.NotThrow(() => _uddfDeserialiser.Deserialise<UniversalDiveDataFormatRoot>(xml));
+		}
 }
