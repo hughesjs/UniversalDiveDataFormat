@@ -48,7 +48,7 @@ public class LinkResolutionService
 	}
 
 	private static bool IsInModelNamespace(Type t) => t.Namespace!.StartsWith("UniversalDiveDataFormat.Models");
-	private static bool IsList(Type type) => type.IsGenericType && type.GetGenericTypeDefinition().IsAssignableTo(typeof(IList));
+	private static bool IsList(Type type) => type.IsGenericType && type.GetGenericTypeDefinition().IsAssignableTo(typeof(IEnumerable));
 	private static bool IsListOfModelObjects(Type type) => IsList(type) && IsInModelNamespace(type.GetGenericArguments().Single());
 	
 	private void FindAllLinkablesAndLinksInSubgraph(object root)
@@ -61,7 +61,7 @@ public class LinkResolutionService
 			if (propertyValue is null) continue;
 			if (IsListOfModelObjects(property.PropertyType))
 			{
-				ProcessListOfModelObjects((IList)propertyValue);
+				ProcessListOfModelObjects((IEnumerable)propertyValue);
 				continue;
 			}
 			
@@ -72,7 +72,7 @@ public class LinkResolutionService
 		}
 	}
 
-	private void ProcessListOfModelObjects(IList list)
+	private void ProcessListOfModelObjects(IEnumerable list)
 	{
 		foreach (object? item in list)
 		{
