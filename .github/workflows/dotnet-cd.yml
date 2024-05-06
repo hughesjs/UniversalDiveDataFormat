@@ -24,6 +24,7 @@ jobs:
     needs: test
     name: Create a Package Release
     runs-on: ubuntu-latest
+    permissions: write-all
     steps:
       - uses: actions/checkout@v4 # Need the full commit history for conventional commit
       - name: Setup .NET
