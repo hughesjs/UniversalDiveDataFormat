@@ -1,15 +1,15 @@
 using System.Xml.Serialization;
 using Shouldly;
 using UniversalDiveDataFormat.ExtensionMethods;
-using Xunit;
+using UniversalDiveDataFormat.Models;
 
-namespace UniversalDiveDataFormat.Models;
+namespace UniversalDiveDataFormat.Tests.Models;
 
 public class SetDiveComputerAlarmTimeTests
 {
 	private const string Xml = """
 	                           <setdcalarmtime>
-	                               <datetime>T14:37:00</datetime>
+	                               <datetime>2022-01-01T14:37:00</datetime>
 	                               <dcalarm>
 	                                   <!-- duration 10 seconds -->
 	                                   <period>10.0</period>
