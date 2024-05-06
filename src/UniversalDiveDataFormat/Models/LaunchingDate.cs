@@ -2,9 +2,9 @@ using System.Xml.Serialization;
 
 namespace UniversalDiveDataFormat.Models;
 
-[XmlRoot("LaunchingDate")]
+[XmlRoot("launchingdate")]
 public class LaunchingDate
 {
 	[XmlElement("datetime")]
-	public DateTime? DateTime { get; init; }
+	public DateTime DateTime { get; init; }
 }

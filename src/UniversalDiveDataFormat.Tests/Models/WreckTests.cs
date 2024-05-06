@@ -1,9 +1,9 @@
 using System.Xml.Serialization;
 using Shouldly;
 using UniversalDiveDataFormat.ExtensionMethods;
-using Xunit;
+using UniversalDiveDataFormat.Models;
 
-namespace UniversalDiveDataFormat.Models;
+namespace UniversalDiveDataFormat.Tests.Models;
 
 public class WreckTests
 {
@@ -13,7 +13,7 @@ public class WreckTests
                                    <shiptype>tanker</shiptype>
                                    <nationality>German</nationality>
                                    <built>
-                                       <shipyard>Blohm & Voss</shipyard>
+                                       <shipyard>Blohm &amp; Voss</shipyard>
                                        <launchingdate>
                                            <datetime>1943-06-14</datetime>
                                        </launchingdate>
@@ -25,7 +25,7 @@ public class WreckTests
                                        <displacement>123456.7</displacement>
                                    </shipdimension>
                                    <sunk>
-                                       <datetime>1985-05-24T15:46</datetime>
+                                       <datetime>1985-05-24T15:46:00</datetime>
                                    </sunk>
                                    <notes>
                                        <!-- here additional remarks and/or photos, videos of the wreck -->
