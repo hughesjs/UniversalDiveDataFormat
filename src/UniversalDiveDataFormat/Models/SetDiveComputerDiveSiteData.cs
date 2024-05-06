@@ -6,5 +6,5 @@ namespace UniversalDiveDataFormat.Models;
 public class SetDiveComputerDiveSiteData: UddfModel
 {
 	[XmlAttribute("divesite")]
-	public string DiveSiteId { get; init; }
+	public required string DiveSiteId { get; init; }
 }

@@ -6,8 +6,8 @@ namespace UniversalDiveDataFormat.Models;
 public class SetDiveComputerAlarmTime: UddfModel
 {
 	[XmlElement("datetime")]
-	public DateTime DateTime { get; init; }
+	public required DateTime DateTime { get; init; }
 	
 	[XmlElement("dcalarm")]
-	public DiveComputerAlarm DiveComputerAlarm { get; init; }
+	public required DiveComputerAlarm DiveComputerAlarm { get; init; }
 }
