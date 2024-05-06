@@ -24,7 +24,8 @@ jobs:
     needs: test
     name: Create a Package Release
     runs-on: ubuntu-latest
-    permissions: write-all
+    permissions: 
+      contents: write
     steps:
       - uses: actions/checkout@v4 # Need the full commit history for conventional commit
       - name: Setup .NET
@@ -52,6 +53,8 @@ jobs:
 
 
   github-publish:
+    permissions: 
+      packages: write
     needs: semantic-release
     name: Publish to Github
     runs-on: ubuntu-latest
