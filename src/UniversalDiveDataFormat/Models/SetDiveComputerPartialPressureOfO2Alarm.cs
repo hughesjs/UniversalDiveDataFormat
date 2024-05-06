@@ -6,8 +6,8 @@ namespace UniversalDiveDataFormat.Models;
 public class SetDiveComputerPartialPressureOfO2Alarm: UddfModel
 {
 	[XmlElement("dcalarm")]
-	public DiveComputerAlarm DiveComputerAlarm { get; init; }
+	public required DiveComputerAlarm DiveComputerAlarm { get; init; }
 	
 	[XmlElement("maximumpo2")]
-	public float? MaximumPartialPressureOfO2InBars { get; init; }
+	public required float MaximumPartialPressureOfO2InBars { get; init; }
 }

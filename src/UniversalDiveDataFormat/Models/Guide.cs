@@ -7,7 +7,7 @@ namespace UniversalDiveDataFormat.Models;
 public class Guide: UddfModel, ILinkable
 {
 	[XmlAttribute("id")]
-	public string Id { get; init; }
+	public string? Id { get; init; }
 	
 	[XmlElement("link")]
 	public Link? Link { get; init; }
