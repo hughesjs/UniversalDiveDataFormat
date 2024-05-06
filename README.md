@@ -10,7 +10,11 @@
 
 This is a C# library for reading and writing the [Universal Dive Data Format](https://www.streit.cc/extern/uddf_v321/en/index.html).
 
-Currently, the library primarily consists of the Models required to deserialize UDDF files using the [XmlSerializer](https://docs.microsoft.com/en-us/dotnet/api/system.xml.serialization.xmlserializer?view=net-7.0).
+Currently, the library primarily consists of the Models required to deserialize UDDF files using either the built-in [XmlSerializer](https://docs.microsoft.com/en-us/dotnet/api/system.xml.serialization.xmlserializer?view=net-7.0) or the custom `UddfDeserilizer`.
+
+The `UddfDeserializer` resolves all links within the UDDF file and maps them onto the object graph.
+
+If you use the built-in `XmlSerializer`, you have to use the `LinkResolutionService` to resolve these links.
 
 Future versions might include extra services for enforcing constraints and validation.
 
@@ -28,9 +32,7 @@ dotnet add package UniversalDiveDataFormat
 using System.Xml.Serialization;
 using UniversalDiveDataFormat.Models;
 
-// Deserialize a complete UDDF file
-var serializer = new XmlSerializer(typeof(UniversalDiveDataFormat.Models.UniversalDiveDataFormatRoot));
-var uddf = serializer.Deserialize(File.OpenRead("my_dive_log.uddf"));
+UniversalDiveDataFormatRoot uddf = _uddfDeserialiser.Deserialise<UniversalDiveDataFormatRoot>(xml);
 ```
 
 ## Contributing
