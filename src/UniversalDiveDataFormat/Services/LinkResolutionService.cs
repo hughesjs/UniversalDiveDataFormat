@@ -67,10 +67,14 @@ public class LinkResolutionService
 		}
 	}
 
-	private bool IsInModelNamespace(Type t) => t.Namespace!.StartsWith("UniversalDiveDataFormat.Models");
-	private bool IsList(Type type) => type.IsGenericType && type.GetGenericTypeDefinition().IsAssignableTo(typeof(IList));
+	private static bool IsInModelNamespace(Type t) => t.Namespace!.StartsWith("UniversalDiveDataFormat.Models");
+	private static bool IsList(Type type) => type.IsGenericType && type.GetGenericTypeDefinition().IsAssignableTo(typeof(IList));
+	private static bool IsListOfModelObjects(Type type) => IsList(type) && IsInModelNamespace(type.GetGenericArguments().Single());
 
-	IEnumerable<object> AllModelObjectsInGraph(object root)
+	
+	// This is horrible... but it works.
+	// Not sure how to tidy it up and keep it as an Enumerable
+	private IEnumerable<object> AllModelObjectsInGraph(object root)
 	{
 		PropertyInfo[] properties = root.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.GetProperty);
 
@@ -78,19 +82,16 @@ public class LinkResolutionService
 		{
 			object? propertyValue = property.GetValue(root);
 			if (propertyValue is null) continue;
-			if (IsList(property.PropertyType))
+			if (IsListOfModelObjects(property.PropertyType))
 			{
-				IList list = (IList)propertyValue!;
-				foreach (object? item in  list)
+				IList list = (IList)propertyValue;
+				foreach (object? item in list)
 				{
 					if (item is null) continue;
-					if (IsInModelNamespace(item.GetType())) // This could be moved out and read reflectively
+					yield return item;
+					foreach (var innerObject in AllModelObjectsInGraph(item))
 					{
-						yield return item;
-						foreach (var innerObject in AllModelObjectsInGraph(item))
-						{
-							yield return innerObject;
-						}
+						yield return innerObject;
 					}
 				}
 				continue;
@@ -99,12 +100,11 @@ public class LinkResolutionService
 			if (!IsInModelNamespace(property.PropertyType)) continue;
 			
 			yield return propertyValue;
-			foreach (var innerObject in AllModelObjectsInGraph(propertyValue))
+			foreach (object innerObject in AllModelObjectsInGraph(propertyValue))
 			{
 				yield return innerObject;
 			}
 		}
-
 	}
 
 }
