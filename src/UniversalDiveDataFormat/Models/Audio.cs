@@ -6,7 +6,7 @@ namespace UniversalDiveDataFormat.Models;
 public class Audio: ILinkable
 {
 	[XmlAttribute("id")]
-	public required string Id { get; init; }
+	public string? Id { get; init; }
 	[XmlElement("objectname")]
 	public required string ObjectName { get; init; }
 	[XmlElement("title")]

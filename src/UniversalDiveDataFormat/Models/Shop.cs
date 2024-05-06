@@ -6,7 +6,7 @@ namespace UniversalDiveDataFormat.Models;
 public class Shop: ILinkable
 {
 	[XmlAttribute("id")]
-	public required string Id { get; init; }
+	public string? Id { get; init; }
 
 	[XmlElement("name")]
 	public required string Name { get; init; }

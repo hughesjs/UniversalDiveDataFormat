@@ -6,7 +6,7 @@ namespace UniversalDiveDataFormat.Models;
 public class VideoCamera: ILinkable
 {
 	[XmlAttribute("id")]
-	public required string Id { get; init; }
+	public string? Id { get; init; }
 	
 	[XmlElement("body")]
 	public Body? Body { get; init; }

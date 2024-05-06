@@ -6,7 +6,7 @@ namespace UniversalDiveDataFormat.Models;
 public class RepetitionGroup : ILinkable
 {
 	[XmlAttribute("id")]
-	public required string Id { get; init; }
+	public string? Id { get; init; }
 
 	[XmlElement("dive")]
 	public List<Dive> Dives { get; init; } = [];

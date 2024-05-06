@@ -1,4 +1,5 @@
 using System.Xml.Serialization;
+using UniversalDiveDataFormat.Models.Linking;
 
 namespace UniversalDiveDataFormat.Models;
 
@@ -6,7 +7,7 @@ namespace UniversalDiveDataFormat.Models;
 public class TankData: ILinkable
 {
 	[XmlAttribute("id")]
-	public required string Id { get; init; }
+	public string? Id { get; init; }
 
 	[XmlElement("breathingconsumptionvolume")]
 	public float? BreathingConsumptionVolumeInMetersCubedPerSecond { get; init; }

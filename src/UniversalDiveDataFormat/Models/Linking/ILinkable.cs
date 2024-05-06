@@ -5,5 +5,5 @@ namespace UniversalDiveDataFormat.Models;
 public interface ILinkable
 {
 	[XmlAttribute("id")]
-	public string Id { get; init; }
+	public string? Id { get; init; }
 }

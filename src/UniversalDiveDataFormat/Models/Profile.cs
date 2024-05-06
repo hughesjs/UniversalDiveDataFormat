@@ -1,5 +1,6 @@
 using System.Xml;
 using System.Xml.Serialization;
+using UniversalDiveDataFormat.Models.Linking;
 
 namespace UniversalDiveDataFormat.Models;
 
@@ -7,7 +8,7 @@ namespace UniversalDiveDataFormat.Models;
 public class Profile: ILinkable
 {
 	[XmlAttribute("id")]
-	public required string Id { get; init; }
+	public string? Id { get; init; }
 	
 	[XmlElement("applicationdata")]
 	public XmlElement? ApplicationData { get; init; } // This stuff is application-specific

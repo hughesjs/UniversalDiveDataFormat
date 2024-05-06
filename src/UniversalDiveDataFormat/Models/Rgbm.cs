@@ -6,7 +6,7 @@ namespace UniversalDiveDataFormat.Models;
 public class Rgbm: ILinkable
 {
 	[XmlAttribute("id")]
-	public required string Id { get; init; }
+	public string? Id { get; init; }
 	
 	[XmlElement("tissue")]
 	public List<Tissue> Tissues { get; init; } = [];

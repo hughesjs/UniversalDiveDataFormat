@@ -6,7 +6,7 @@ namespace UniversalDiveDataFormat.Models;
 public class Instructor: ILinkable
 {
 	[XmlAttribute("id")]
-	public required string Id { get; init; }
+	public string? Id { get; init; }
 	
 	[XmlElement("personal")]
 	public required Personal Personal { get; init; }

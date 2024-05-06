@@ -6,7 +6,7 @@ namespace UniversalDiveDataFormat.Models;
 public class Buehlmann: ILinkable
 {
 	[XmlAttribute("id")]
-	public required string Id { get; init; }
+	public string? Id { get; init; }
 
 	[XmlElement("gradientfactorhigh")]
 	public float? GradientFactorHigh { get; init; }

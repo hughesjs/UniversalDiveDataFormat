@@ -6,7 +6,7 @@ namespace UniversalDiveDataFormat.Models;
 public class Image : ILinkable
 {
 	[XmlAttribute("id")]
-	public required string Id { get; init; }
+	public string? Id { get; init; }
 	
 	// These should ideally be int? but the serializer doesn't like that
 	[XmlAttribute("height")]

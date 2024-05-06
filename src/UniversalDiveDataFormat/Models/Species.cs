@@ -6,7 +6,7 @@ namespace UniversalDiveDataFormat.Models;
 public class Species : ILinkable
 {
 	[XmlAttribute("id")]
-	public required string Id { get; init; }
+	public string? Id { get; init; }
 
 	[XmlElement("trivialname")]
 	public string? TrivialName { get; init; }

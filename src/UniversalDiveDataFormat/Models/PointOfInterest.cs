@@ -5,7 +5,7 @@ namespace UniversalDiveDataFormat.Models;
 public abstract class PointOfInterest : ILinkable
 {
 	[XmlAttribute("id")]
-	public required string Id { get; init; }
+	public string? Id { get; init; }
 	
 	[XmlElement("name")]
 	public required string Name { get; init; }
