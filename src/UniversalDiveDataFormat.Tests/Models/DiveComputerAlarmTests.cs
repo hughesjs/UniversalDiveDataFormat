@@ -1,9 +1,9 @@
 using System.Xml.Serialization;
 using Shouldly;
 using UniversalDiveDataFormat.ExtensionMethods;
-using Xunit;
+using UniversalDiveDataFormat.Models;
 
-namespace UniversalDiveDataFormat.Models;
+namespace UniversalDiveDataFormat.Tests.Models;
 
 public class DiveComputerAlarmTests
 {
@@ -23,6 +23,6 @@ public class DiveComputerAlarmTests
 		DiveComputerAlarm dcAlarm = serializer.Deserialize<DiveComputerAlarm>(Xml);
 		dcAlarm.PeriodInSeconds.ShouldBe(10.0f);
 		dcAlarm.AlarmType.ShouldBe(1);
-		dcAlarm.Acknowledge.ShouldBeNull();
+		dcAlarm.Acknowledge.ShouldNotBeNull();
 	}
 }

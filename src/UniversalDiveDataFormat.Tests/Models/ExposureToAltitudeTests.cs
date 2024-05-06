@@ -3,7 +3,7 @@ using Shouldly;
 using UniversalDiveDataFormat.ExtensionMethods;
 using UniversalDiveDataFormat.Models;
 
-namespace UniversalDiveDataFormat.Tests;
+namespace UniversalDiveDataFormat.Tests.Models;
 
 public class ExposureToAltitudeTests
 {

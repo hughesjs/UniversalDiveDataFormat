@@ -1,9 +1,9 @@
 using System.Xml.Serialization;
 using Shouldly;
 using UniversalDiveDataFormat.ExtensionMethods;
-using Xunit;
+using UniversalDiveDataFormat.Models;
 
-namespace UniversalDiveDataFormat.Models;
+namespace UniversalDiveDataFormat.Tests.Models;
 
 public class ShipDimensionTests
 {
@@ -13,7 +13,7 @@ public class ShipDimensionTests
 	                               <beam>12.6</beam>
 	                               <draught>5.7</draught>
 	                               <displacement>123456.7</displacement>
-	                               <tonnage>170000.0</tonnag>
+	                               <tonnage>170000.0</tonnage>
 	                           </shipdimension>
 	                           """;
 	
