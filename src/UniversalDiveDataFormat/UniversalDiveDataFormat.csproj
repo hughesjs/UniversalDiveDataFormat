@@ -5,9 +5,19 @@
     <LangVersion>latest</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.0.1</Version>
+    <Title>UniversalDiveDataFormat</Title>
+    <Authors />
+    <PackageProjectUrl>https://github.com/hughesjs/UniversalDiveDataFormat</PackageProjectUrl>
+    <PackageLicenseExpression>Unlicense</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/hughesjs/UniversalDiveDataFormat.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
     <Reference Include="Shouldly">
       <HintPath>..\..\..\..\.nuget\packages\shouldly\4.2.1\lib\net5.0\Shouldly.dll</HintPath>
     </Reference>
