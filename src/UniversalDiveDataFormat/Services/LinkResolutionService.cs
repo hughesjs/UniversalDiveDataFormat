@@ -47,34 +47,11 @@ public class LinkResolutionService
 		}
 	}
 
-	private void FindAllLinkablesAndLinksInSubgraph(object root)
-	{
-		foreach (object model in AllModelObjectsInGraph(root))
-		{
-			if (model.GetType().IsAssignableTo(typeof(ILinkable)))
-			{
-				ILinkable linkable = (ILinkable)model;
-				if (linkable.Id is not null)
-				{
-					_linkableLookup[linkable.Id] = linkable;
-				}
-			}
-			
-			if (model is Link link)
-			{
-				_links.Add(link);
-			}
-		}
-	}
-
 	private static bool IsInModelNamespace(Type t) => t.Namespace!.StartsWith("UniversalDiveDataFormat.Models");
 	private static bool IsList(Type type) => type.IsGenericType && type.GetGenericTypeDefinition().IsAssignableTo(typeof(IList));
 	private static bool IsListOfModelObjects(Type type) => IsList(type) && IsInModelNamespace(type.GetGenericArguments().Single());
-
 	
-	// This is horrible... but it works.
-	// Not sure how to tidy it up and keep it as an Enumerable
-	private IEnumerable<object> AllModelObjectsInGraph(object root)
+	private void FindAllLinkablesAndLinksInSubgraph(object root)
 	{
 		PropertyInfo[] properties = root.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.GetProperty);
 
@@ -84,26 +61,41 @@ public class LinkResolutionService
 			if (propertyValue is null) continue;
 			if (IsListOfModelObjects(property.PropertyType))
 			{
-				IList list = (IList)propertyValue;
-				foreach (object? item in list)
-				{
-					if (item is null) continue;
-					yield return item;
-					foreach (var innerObject in AllModelObjectsInGraph(item))
-					{
-						yield return innerObject;
-					}
-				}
+				ProcessListOfModelObjects((IList)propertyValue);
 				continue;
 			}
 			
 			if (!IsInModelNamespace(property.PropertyType)) continue;
 			
-			yield return propertyValue;
-			foreach (object innerObject in AllModelObjectsInGraph(propertyValue))
+			ProcessModelObject(propertyValue);
+			FindAllLinkablesAndLinksInSubgraph(propertyValue);
+		}
+	}
+
+	private void ProcessListOfModelObjects(IList list)
+	{
+		foreach (object? item in list)
+		{
+			if (item is null) continue;
+			ProcessModelObject(item);
+			FindAllLinkablesAndLinksInSubgraph(item);
+		}
+	}
+	
+	private void ProcessModelObject(object model)
+	{
+		if (model.GetType().IsAssignableTo(typeof(ILinkable)))
+		{
+			ILinkable linkable = (ILinkable)model;
+			if (linkable.Id is not null)
 			{
-				yield return innerObject;
+				_linkableLookup[linkable.Id] = linkable;
 			}
+		}
+		
+		if (model is Link link)
+		{
+			_links.Add(link);
 		}
 	}
 
