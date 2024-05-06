@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("videocamera")]
-public class VideoCamera: ILinkable
+public class VideoCamera: UddfModel, ILinkable
 {
 	[XmlAttribute("id")]
 	public string? Id { get; init; }

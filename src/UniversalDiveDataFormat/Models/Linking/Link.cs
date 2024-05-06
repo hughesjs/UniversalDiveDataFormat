@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models.Linking;
 
 [XmlRoot("link")]
-public class Link
+public class Link: UddfModel
 {
 	[XmlAttribute("ref")]
 	public required string Ref { get; init; }

@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("examination")]
-public class MedicalExamination
+public class MedicalExamination: UddfModel
 {
 	[XmlElement("datetime")]
 	public DateTime? DateTime { get; init; }

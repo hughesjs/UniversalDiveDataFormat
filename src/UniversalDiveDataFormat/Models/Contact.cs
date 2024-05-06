@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("contact")]
-public class Contact
+public class Contact: UddfModel
 {
     [XmlElement("email")]
     public List<string> Emails { get; init; } = [];

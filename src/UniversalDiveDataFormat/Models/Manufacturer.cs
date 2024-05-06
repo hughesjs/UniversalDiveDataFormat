@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("manufacturer")]
-public class Manufacturer: ILinkable
+public class Manufacturer: UddfModel, ILinkable
 {
     [XmlAttribute("id")] 
     public string? Id { get; init; }

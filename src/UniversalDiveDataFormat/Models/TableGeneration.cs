@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("tablegeneration")]
-public class TableGeneration
+public class TableGeneration: UddfModel
 {
 	[XmlElement("calculatebottomtimetable")]
 	public CalculateBottomTimeTable? CalculateBottomTimeTable { get; init; }

@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("operator")]
-public class Operator
+public class Operator: UddfModel
 {
 	[XmlElement("name")]
 	public required string Name { get; init; }

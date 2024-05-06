@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("invertebrata")]
-public class Invertebrata
+public class Invertebrata: UddfModel
 {
 	[XmlElement("amphibia")]
 	public Amphibia? Amphibia { get; init; }

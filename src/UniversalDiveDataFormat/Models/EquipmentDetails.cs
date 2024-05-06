@@ -41,56 +41,56 @@ public abstract class EquipmentDetails : ILinkable
 }
 
 [XmlRoot("buoyancycontroldevice")]
-public class BuoyancyControlDevice : EquipmentDetails;
+public class BuoyancyControlDevice: EquipmentDetails;
 
 [XmlRoot("boots")]
-public class Boots : EquipmentDetails;
+public class Boots: EquipmentDetails;
 
 [XmlRoot("compass")]
-public class Compass : EquipmentDetails;
+public class Compass: EquipmentDetails;
 
 [XmlRoot("compressor")]
-public class Compressor : EquipmentDetails;
+public class Compressor: EquipmentDetails;
 
 [XmlRoot("divecomputer")]
-public class DiveComputer : EquipmentDetails;
+public class DiveComputer: EquipmentDetails;
 
 [XmlRoot("fins")]
-public class Fins : EquipmentDetails;
+public class Fins: EquipmentDetails;
 
 [XmlRoot("gloves")]
-public class Gloves : EquipmentDetails;
+public class Gloves: EquipmentDetails;
 
 [XmlRoot("knife")]
-public class Knife : EquipmentDetails;
+public class Knife: EquipmentDetails;
 
 [XmlRoot("lead")]
-public class Lead : EquipmentDetails;
+public class Lead: EquipmentDetails;
 
 [XmlRoot("light")]
-public class Light : EquipmentDetails;
+public class Light: EquipmentDetails;
 
 [XmlRoot("mask")]
-public class Mask : EquipmentDetails;
+public class Mask: EquipmentDetails;
 
 [XmlRoot("rebreather")]
-public class Rebreather : EquipmentDetails;
+public class Rebreather: EquipmentDetails;
 
 [XmlRoot("regulator")]
-public class Regulator : EquipmentDetails;
+public class Regulator: EquipmentDetails;
 
 [XmlRoot("scooter")]
-public class Scooter : EquipmentDetails;
+public class Scooter: EquipmentDetails;
 
 [XmlRoot("suit")]
-public class Suit : EquipmentDetails
+public class Suit: EquipmentDetails
 { 
 	[XmlElement("suittype")]
 	public SuitType? SuitType { get; init; }
 }
 
 [XmlRoot("tank")]
-public class Tank : EquipmentDetails
+public class Tank: EquipmentDetails
 {
 	[XmlElement("tankmaterial")]
 	public TankMaterial? TankMaterial { get; init; }
@@ -100,19 +100,19 @@ public class Tank : EquipmentDetails
 }
 
 [XmlRoot("variouspieces")]
-public class VariousPieces : EquipmentDetails;
+public class VariousPieces: EquipmentDetails;
 
 [XmlRoot("watch")]
-public class Watch : EquipmentDetails;
+public class Watch: EquipmentDetails;
 
 [XmlRoot("body")]
 public class Body: EquipmentDetails;
 
 [XmlRoot("flash")]
-public class Flash : EquipmentDetails;
+public class Flash: EquipmentDetails;
 
 [XmlRoot("housing")]
-public class Housing : EquipmentDetails;
+public class Housing: EquipmentDetails;
 
 [XmlRoot("lens")]
-public class Lens : EquipmentDetails;  
+public class Lens: EquipmentDetails;  

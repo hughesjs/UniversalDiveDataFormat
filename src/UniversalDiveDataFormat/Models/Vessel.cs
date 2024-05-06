@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("vessel")]
-public class Vessel
+public class Vessel: UddfModel
 {
 	[XmlElement("address")]
 	public Address? Address { get; init; }

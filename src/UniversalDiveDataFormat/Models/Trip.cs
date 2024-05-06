@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("trip")]
-public class Trip: ILinkable
+public class Trip: UddfModel, ILinkable
 {
 	[XmlAttribute("id")]
 	public string? Id { get; init; }

@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("setdcdata")]
-public class SetDiveComputerData
+public class SetDiveComputerData: UddfModel
 {
 	[XmlElement("setdcalarmtime")]
 	public SetDiveComputerAlarmTime? SetDiveComputerAlarmTime { get; init; }
@@ -50,10 +50,10 @@ public class SetDiveComputerData
 }
 
 [XmlRoot("setdcgeneratordata")]
-public class SetDiveComputerGeneratorData;
+public class SetDiveComputerGeneratorData: UddfModel;
 
 [XmlRoot("setdcownerdata")]
-public class SetDiveComputerOwnerData;
+public class SetDiveComputerOwnerData: UddfModel;
 
 [XmlRoot("setgasdefinitionsdata")]
-public class SetDiveComputerGasDefinitionsData;
+public class SetDiveComputerGasDefinitionsData: UddfModel;

@@ -4,7 +4,7 @@ using UniversalDiveDataFormat.Models.Linking;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("purchase")]
-public class Purchase
+public class Purchase: UddfModel
 {
 	[XmlElement("datetime")]
 	public DateTime? DateTime { get; init; }

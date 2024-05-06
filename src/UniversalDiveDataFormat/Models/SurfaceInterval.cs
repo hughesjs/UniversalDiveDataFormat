@@ -19,7 +19,7 @@ public abstract class SurfaceInterval
 
 
 [XmlRoot("surfaceintervalafterdive")]
-public class SurfaceIntervalAfterDive : SurfaceInterval;
+public class SurfaceIntervalAfterDive: SurfaceInterval;
 
 [XmlRoot("surfaceintervalbeforedive")]
-public class SurfaceIntervalBeforeDive : SurfaceInterval;
+public class SurfaceIntervalBeforeDive: SurfaceInterval;

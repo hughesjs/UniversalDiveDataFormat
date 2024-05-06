@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("setdcdivepo2alarm")]
-public class SetDiveComputerPartialPressureOfO2Alarm
+public class SetDiveComputerPartialPressureOfO2Alarm: UddfModel
 {
 	[XmlElement("dcalarm")]
 	public DiveComputerAlarm DiveComputerAlarm { get; init; }

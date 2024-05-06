@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("dcalarm")]
-public class DiveComputerAlarm
+public class DiveComputerAlarm: UddfModel
 {
 	[XmlElement("acknowledge")]
 	public Acknowledge? Acknowledge { get; init; }

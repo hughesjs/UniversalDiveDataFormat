@@ -5,7 +5,7 @@ using UniversalDiveDataFormat.Models.Linking;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("bottomtimetable")]
-public class BottomTimeTable: ILinkable
+public class BottomTimeTable: UddfModel, ILinkable
 {
 	[XmlAttribute("id")]
 	public string? Id { get; init; }

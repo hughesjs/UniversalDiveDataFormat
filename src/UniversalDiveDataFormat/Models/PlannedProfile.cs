@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("plannedprofile")]
-public class PlannedProfile
+public class PlannedProfile: UddfModel
 {
 	[XmlAttribute("startdivemode")]
 	public required StartDiveMode StartDiveMode { get; init; }

@@ -4,7 +4,7 @@ using UniversalDiveDataFormat.Models.Linking;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("certification")]
-public class Certification
+public class Certification: UddfModel
 {
 	[XmlElement("level")]
 	public string? Level { get; init; }

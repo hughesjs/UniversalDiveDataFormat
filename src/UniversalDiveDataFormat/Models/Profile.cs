@@ -5,7 +5,7 @@ using UniversalDiveDataFormat.Models.Linking;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("profile")]
-public class Profile: ILinkable
+public class Profile: UddfModel, ILinkable
 {
 	[XmlAttribute("id")]
 	public string? Id { get; init; }

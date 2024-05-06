@@ -4,7 +4,7 @@ using UniversalDiveDataFormat.Models.Linking;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("relateddives")]
-public class RelatedDives
+public class RelatedDives: UddfModel
 {
 	[XmlElement("link")]
 	public List<Link> Links { get; init; } = [];

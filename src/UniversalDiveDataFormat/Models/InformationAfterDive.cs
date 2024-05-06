@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("informationafterdive")]
-public class InformationAfterDive
+public class InformationAfterDive: UddfModel
 {
 	
 	[XmlElement("anysymptoms")]

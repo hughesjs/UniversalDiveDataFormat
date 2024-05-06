@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("abundance")]
-public class Abundance
+public class Abundance: UddfModel
 {
 	[XmlAttribute("quality")]
 	public Quality Quality { get; init; }

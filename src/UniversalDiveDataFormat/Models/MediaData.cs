@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("mediadata")]
-public class MediaData
+public class MediaData: UddfModel
 {
 	[XmlElement("audio")]
 	public List<Audio> AudioFiles { get; init; } = [];

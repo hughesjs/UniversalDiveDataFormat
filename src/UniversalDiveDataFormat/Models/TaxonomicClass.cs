@@ -9,70 +9,70 @@ public abstract class TaxonomicClass
 }
 
 [XmlRoot("chlorophyceae")]
-public class Chlorophyceae : TaxonomicClass;
+public class Chlorophyceae: TaxonomicClass;
 
 [XmlRoot("floravarious")]
-public class Floravarious : TaxonomicClass;
+public class Floravarious: TaxonomicClass;
 
 [XmlRoot("phaeophyceae")]
-public class Phaeophyceae : TaxonomicClass;
+public class Phaeophyceae: TaxonomicClass;
 
 [XmlRoot("rhodophyceae")]
-public class Rhodophyceae : TaxonomicClass;
+public class Rhodophyceae: TaxonomicClass;
 
 [XmlRoot("spermatophyta")]
-public class Spermatophyta : TaxonomicClass;
+public class Spermatophyta: TaxonomicClass;
 
 [XmlRoot("ascidiacea")]
-public class Ascidiacea : TaxonomicClass;
+public class Ascidiacea: TaxonomicClass;
 
 [XmlRoot("bryozoa")]
-public class Bryozoa : TaxonomicClass;
+public class Bryozoa: TaxonomicClass;
 
 [XmlRoot("cnidaria")]
-public class Cnidaria : TaxonomicClass;
+public class Cnidaria: TaxonomicClass;
 
 [XmlRoot("coelenterata")]
-public class Coelenterata : TaxonomicClass;
+public class Coelenterata: TaxonomicClass;
 
 [XmlRoot("crustacea")]
-public class Crustacea : TaxonomicClass;
+public class Crustacea: TaxonomicClass;
 
 [XmlRoot("ctenophora")]
-public class Ctenophora : TaxonomicClass;
+public class Ctenophora: TaxonomicClass;
 
 [XmlRoot("echinodermata")]
-public class Echinodermata : TaxonomicClass;
+public class Echinodermata: TaxonomicClass;
 
 [XmlRoot("mollusca")]
-public class Mollusca : TaxonomicClass;
+public class Mollusca: TaxonomicClass;
 
 [XmlRoot("phoronidea")]
-public class Phoronidea : TaxonomicClass;
+public class Phoronidea: TaxonomicClass;
 
 [XmlRoot("plathelminthes")]
-public class Plathelminthes : TaxonomicClass;
+public class Plathelminthes: TaxonomicClass;
 
 [XmlRoot("porifera")]
-public class Porifera : TaxonomicClass;
+public class Porifera: TaxonomicClass;
 
 [XmlRoot("invertebratavarious")]
-public class InvertebrataVarious : TaxonomicClass;
+public class InvertebrataVarious: TaxonomicClass;
 
 [XmlRoot("amphibia")]
-public class Amphibia : TaxonomicClass;
+public class Amphibia: TaxonomicClass;
 
 [XmlRoot("chondrichthyes")]
-public class Chondrichthyes : TaxonomicClass;
+public class Chondrichthyes: TaxonomicClass;
 
 [XmlRoot("mammalia")]
-public class Mammalia : TaxonomicClass;
+public class Mammalia: TaxonomicClass;
 
 [XmlRoot("osteichthyes")]
-public class Osteichthyes : TaxonomicClass;
+public class Osteichthyes: TaxonomicClass;
 
 [XmlRoot("reptilia")]
-public class Reptilia : TaxonomicClass;
+public class Reptilia: TaxonomicClass;
 
 [XmlRoot("vertebratavarious")]
-public class VertebrataVarious : TaxonomicClass;
+public class VertebrataVarious: TaxonomicClass;

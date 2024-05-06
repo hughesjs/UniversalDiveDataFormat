@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("permit")]
-public class Permit
+public class Permit: UddfModel
 {
 	[XmlElement("name")]
 	public required string Name { get; init; }

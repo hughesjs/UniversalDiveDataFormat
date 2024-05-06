@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("setdcalarmtime")]
-public class SetDiveComputerAlarmTime
+public class SetDiveComputerAlarmTime: UddfModel
 {
 	[XmlElement("datetime")]
 	public DateTime DateTime { get; init; }

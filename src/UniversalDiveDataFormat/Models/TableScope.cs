@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("tablescope")]
-public class TableScope
+public class TableScope: UddfModel
 {
 	[XmlElement("altitude")]
 	public required float AltitudeInMeters { get; init; }

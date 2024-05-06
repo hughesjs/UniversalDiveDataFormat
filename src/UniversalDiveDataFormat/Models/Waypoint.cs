@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("waypoint")]
-public class Waypoint
+public class Waypoint: UddfModel
 {
 	[XmlElement("depth")]
 	public float? DepthInMeters { get; init; }

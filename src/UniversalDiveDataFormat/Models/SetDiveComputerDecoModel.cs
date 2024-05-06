@@ -4,7 +4,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("setdcdecomodel")]
-public class SetDiveComputerDecoModel
+public class SetDiveComputerDecoModel: UddfModel
 {
 	[XmlElement("name")]
 	public required string Name { get; init; }

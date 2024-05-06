@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("uddf")]
-public class UniversalDiveDataFormatRoot
+public class UniversalDiveDataFormatRoot: UddfModel
 {
 	[XmlAttribute("version")]
 	public required string Version { get; init; }

@@ -4,7 +4,7 @@ using UniversalDiveDataFormat.Models.Linking;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("guide")]
-public class Guide: ILinkable
+public class Guide: UddfModel, ILinkable
 {
 	[XmlAttribute("id")]
 	public string Id { get; init; }

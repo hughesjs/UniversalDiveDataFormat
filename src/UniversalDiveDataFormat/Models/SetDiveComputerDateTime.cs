@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("setdcdatetime")]
-public class SetDiveComputerDateTime
+public class SetDiveComputerDateTime: UddfModel
 {
 	[XmlElement("datetime")]
 	public DateTime? DateTime { get; init; }

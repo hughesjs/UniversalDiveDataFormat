@@ -44,10 +44,10 @@ public abstract class DiverDetails : ILinkable
 }
 
 [XmlRoot("buddy")]
-public class Buddy : DiverDetails;
+public class Buddy: DiverDetails;
 
 [XmlRoot("owner")]
-public class Owner : DiverDetails;
+public class Owner: DiverDetails;
 
 [XmlRoot("student")]
-public class Student;
+public class Student: UddfModel;

@@ -21,8 +21,8 @@ public abstract class Drug
 }
 
 [XmlRoot("drink")]
-public class Drink : Drug;
+public class Drink: Drug;
 
 
 [XmlRoot("medicine")]
-public class Medicine : Drug;
+public class Medicine: Drug;
