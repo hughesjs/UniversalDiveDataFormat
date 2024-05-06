@@ -14,6 +14,11 @@ public class LinkResolutionService
 	private readonly List<Link> _links;
 
 	private readonly bool _failOnMissingLink;
+	
+	private static bool IsInModelNamespace(Type t) => t.Namespace!.StartsWith("UniversalDiveDataFormat.Models");
+	private static bool IsList(Type type) => type.IsGenericType && type.GetGenericTypeDefinition().IsAssignableTo(typeof(IEnumerable));
+	private static bool IsListOfModelObjects(Type type) => IsList(type) && IsInModelNamespace(type.GetGenericArguments().Single());
+
 
 	public LinkResolutionService(bool failOnMissingLink = true)
 	{
@@ -24,6 +29,8 @@ public class LinkResolutionService
 
 	public void ResolveAllLinksInObjectGraph(object root)
 	{
+		_linkableLookup.Clear();
+		_links.Clear();
 		// Maybe make everything inherit from an empty base and use that rather than object
 		if (!IsInModelNamespace(root.GetType()))
 		{
@@ -46,39 +53,24 @@ public class LinkResolutionService
 			link.SetLinkedObject(linkable);
 		}
 	}
-
-	private static bool IsInModelNamespace(Type t) => t.Namespace!.StartsWith("UniversalDiveDataFormat.Models");
-	private static bool IsList(Type type) => type.IsGenericType && type.GetGenericTypeDefinition().IsAssignableTo(typeof(IEnumerable));
-	private static bool IsListOfModelObjects(Type type) => IsList(type) && IsInModelNamespace(type.GetGenericArguments().Single());
 	
-	private void FindAllLinkablesAndLinksInSubgraph(object root)
+	private void FindAllLinkablesAndLinksInSubgraph(object? root)
 	{
+		if (root is null) return;
 		PropertyInfo[] properties = root.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.GetProperty);
-
+		ProcessModelObject(root);
 		foreach (PropertyInfo property in properties)
 		{
 			object? propertyValue = property.GetValue(root);
 			if (propertyValue is null) continue;
 			if (IsListOfModelObjects(property.PropertyType))
 			{
-				ProcessListOfModelObjects((IEnumerable)propertyValue);
+				((IEnumerable)propertyValue).Cast<object?>().ToList().ForEach(FindAllLinkablesAndLinksInSubgraph);
 				continue;
 			}
 			
 			if (!IsInModelNamespace(property.PropertyType)) continue;
-			
-			ProcessModelObject(propertyValue);
 			FindAllLinkablesAndLinksInSubgraph(propertyValue);
-		}
-	}
-
-	private void ProcessListOfModelObjects(IEnumerable list)
-	{
-		foreach (object? item in list)
-		{
-			if (item is null) continue;
-			ProcessModelObject(item);
-			FindAllLinkablesAndLinksInSubgraph(item);
 		}
 	}
 	
