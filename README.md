@@ -6,7 +6,7 @@
 ![FTB](https://raw.githubusercontent.com/hughesjs/custom-badges/master/made-in/made-in-scotland.svg)
 
 
-# Universal Dive Data Format ``
+# Universal Dive Data Format
 
 This is a C# library for reading and writing the [Universal Dive Data Format](https://www.streit.cc/extern/uddf_v321/en/index.html).
 
