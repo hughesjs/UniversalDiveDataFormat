@@ -2,10 +2,10 @@ using System.Xml.Serialization;
 
 namespace UniversalDiveDataFormat.Models;
 
-public abstract class DiverDetails : ILinkable
+public abstract class DiverDetails: UddfModel, ILinkable
 {
 	[XmlAttribute("id")]
-	public required string Id { get; init; }
+	public string? Id { get; init; }
 	
 	[XmlElement("address")]
 	public Address? Address { get; init; }
@@ -44,10 +44,10 @@ public abstract class DiverDetails : ILinkable
 }
 
 [XmlRoot("buddy")]
-public class Buddy : DiverDetails;
+public class Buddy: DiverDetails;
 
 [XmlRoot("owner")]
-public class Owner : DiverDetails;
+public class Owner: DiverDetails;
 
 [XmlRoot("student")]
-public class Student;
+public class Student: UddfModel;

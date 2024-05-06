@@ -1,12 +1,13 @@
 using System.Xml.Serialization;
+using UniversalDiveDataFormat.Models.Linking;
 
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("site")]
-public class Site: ILinkable
+public class Site: UddfModel, ILinkable
 {
 	[XmlAttribute("id")]
-	public required string Id { get; init; }
+	public string? Id { get; init; }
 	
 	[XmlElement("name")]
 	public required string Name { get; init; }

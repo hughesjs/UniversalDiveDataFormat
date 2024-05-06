@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("shipdimension")]
-public class ShipDimension
+public class ShipDimension: UddfModel
 {
 	[XmlElement("beam")]
 	public float? BeamInMeters { get; init; }

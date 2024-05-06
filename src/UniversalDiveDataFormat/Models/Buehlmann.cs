@@ -3,10 +3,10 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("buehlmann")]
-public class Buehlmann: ILinkable
+public class Buehlmann: UddfModel, ILinkable
 {
 	[XmlAttribute("id")]
-	public required string Id { get; init; }
+	public string? Id { get; init; }
 
 	[XmlElement("gradientfactorhigh")]
 	public float? GradientFactorHigh { get; init; }

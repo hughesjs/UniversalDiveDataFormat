@@ -3,10 +3,10 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("mix")]
-public class Mix: ILinkable
+public class Mix: UddfModel, ILinkable
 {
 	[XmlAttribute("id")]
-	public required string Id { get; init; }
+	public string? Id { get; init; }
 	
 	[XmlElement("name")]
 	public required string Name { get; init; }

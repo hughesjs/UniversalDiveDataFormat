@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("decomodel")]
-public class DecoModel
+public class DecoModel: UddfModel
 {
 	[XmlElement("buehlmann")]
 	public List<Buehlmann> BuehlmannModels { get; init; } = [];

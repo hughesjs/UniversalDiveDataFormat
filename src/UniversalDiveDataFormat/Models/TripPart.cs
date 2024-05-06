@@ -1,9 +1,10 @@
 using System.Xml.Serialization;
+using UniversalDiveDataFormat.Models.Linking;
 
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("trippart")]
-public class TripPart
+public class TripPart: UddfModel
 {
 	[XmlElement("name")]
 	public required string Name { get; init; }

@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("getdcdata")]
-public class GetDiveComputerData
+public class GetDiveComputerData: UddfModel
 {
 	[XmlElement("getdcalldata")]
 	public GetDcAllData? GetDiveComputerAllData { get; init; }
@@ -32,25 +32,25 @@ public class GetDiveComputerData
 
 
 [XmlRoot("getdcdata")]
-public class GetDcAllData; 
+public class GetDcAllData: UddfModel; 
 
 [XmlRoot("getdcbuddydata")]
-public class GetDcBuddyData; 
+public class GetDcBuddyData: UddfModel; 
 
 [XmlRoot("getdcdivesitedata")]
-public class GetDcDiveSiteData; 
+public class GetDcDiveSiteData: UddfModel; 
 
 [XmlRoot("getdcdivetripdata")]
-public class GetDcDiveTripData; 
+public class GetDcDiveTripData: UddfModel; 
 
 [XmlRoot("getdcgasdefinitionsdata")]
-public class GetDcGasDefinitionsData; 
+public class GetDcGasDefinitionsData: UddfModel; 
 
 [XmlRoot("getdcgeneratordata")]
-public class GetDcGeneratorData; 
+public class GetDcGeneratorData: UddfModel; 
 
 [XmlRoot("getdcownerdata")]
-public class GetDcOwnerData; 
+public class GetDcOwnerData: UddfModel; 
 
 [XmlRoot("getdcprofiledata")]
-public class GetDcProfileData; 
+public class GetDcProfileData: UddfModel; 

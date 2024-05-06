@@ -1,9 +1,10 @@
 using System.Xml.Serialization;
+using UniversalDiveDataFormat.Models.Linking;
 
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("generator")]
-public class Generator
+public class Generator: UddfModel
 {
 	[XmlElement("name")]
 	public required string Name { get; init; }

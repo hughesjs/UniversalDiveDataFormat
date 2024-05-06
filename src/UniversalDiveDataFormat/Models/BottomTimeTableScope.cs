@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("bottomtimetablescope")]
-public class BottomTimeTableScope
+public class BottomTimeTableScope: UddfModel
 {
 	[XmlElement("breathingconsumptionvolumebegin")]
 	public required float BreathingConsumptionVolumeBeginInCubicMetersPerSecond { get; init; }

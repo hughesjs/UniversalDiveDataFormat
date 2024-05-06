@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("imagedata")]
-public class ImageData
+public class ImageData: UddfModel
 {
 	[XmlElement("aperture")]
 	public float? Aperture { get; init; }

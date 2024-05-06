@@ -1,9 +1,10 @@
 using System.Xml.Serialization;
+using UniversalDiveDataFormat.Models.Linking;
 
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("equipmentused")]
-public class EquipmentUsed
+public class EquipmentUsed: UddfModel
 {
 	[XmlElement("leadquantity")]
 	public float? LeadQuantityInKg { get; init; }

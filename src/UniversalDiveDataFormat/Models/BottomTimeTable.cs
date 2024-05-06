@@ -1,13 +1,14 @@
 using System.Xml;
 using System.Xml.Serialization;
+using UniversalDiveDataFormat.Models.Linking;
 
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("bottomtimetable")]
-public class BottomTimeTable: ILinkable
+public class BottomTimeTable: UddfModel, ILinkable
 {
 	[XmlAttribute("id")]
-	public required string Id { get; init; }
+	public string? Id { get; init; }
 	
 	[XmlElement("link")]
 	public List<Link> Links { get; init; } = [];

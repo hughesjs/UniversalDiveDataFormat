@@ -1,9 +1,10 @@
 using System.Xml.Serialization;
+using UniversalDiveDataFormat.Models.Linking;
 
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("informationbeforedive")]
-public class InformationBeforeDive
+public class InformationBeforeDive: UddfModel
 {
 	[XmlElement("airtemperature")]
 	public float? AirTemperatureInKelvin { get; init; }

@@ -1,9 +1,10 @@
 using System.Xml.Serialization;
+using UniversalDiveDataFormat.Models.Linking;
 
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("divecomputerdump")]
-public class DiveComputerDump
+public class DiveComputerDump: UddfModel
 {
 	[XmlElement("datetime")]
 	public DateTime? DateTime { get; init; }

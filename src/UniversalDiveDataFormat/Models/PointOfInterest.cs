@@ -2,10 +2,10 @@ using System.Xml.Serialization;
 
 namespace UniversalDiveDataFormat.Models;
 
-public abstract class PointOfInterest : ILinkable
+public abstract class PointOfInterest: UddfModel, ILinkable
 {
 	[XmlAttribute("id")]
-	public required string Id { get; init; }
+	public string? Id { get; init; }
 	
 	[XmlElement("name")]
 	public required string Name { get; init; }
@@ -18,19 +18,19 @@ public abstract class PointOfInterest : ILinkable
 }
 
 [XmlRoot("lake")]
-public class Lake : PointOfInterest;
+public class Lake:  PointOfInterest;
 
 [XmlRoot("cave")]
-public class Cave : PointOfInterest;
+public class Cave:  PointOfInterest;
 
 [XmlRoot("river")]
-public class River : PointOfInterest;
+public class River:  PointOfInterest;
 
 [XmlRoot("shore")]
-public class Shore : PointOfInterest;
+public class Shore:  PointOfInterest;
 
 [XmlRoot("wreck")]
-public class Wreck : PointOfInterest
+public class Wreck:  PointOfInterest
 {
 	[XmlElement("built")]
 	public Built? Built { get; init; }
@@ -50,7 +50,7 @@ public class Wreck : PointOfInterest
 }
 
 [XmlRoot("indoor")]
-public class Indoor: PointOfInterest
+public class Indoor:  PointOfInterest
 {
 	
 	[XmlElement("address")]

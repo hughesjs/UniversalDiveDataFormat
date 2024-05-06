@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("insurance")]
-public class Insurance
+public class Insurance: UddfModel
 {
 	[XmlElement("name")]
 	public string? Name { get; init; }

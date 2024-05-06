@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("ecology")]
-public class Ecology
+public class Ecology: UddfModel
 {
 	[XmlElement("flora")]
 	public Flora? Flora { get; init; } 

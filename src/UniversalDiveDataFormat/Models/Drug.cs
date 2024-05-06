@@ -2,7 +2,7 @@ using System.Xml.Serialization;
 
 namespace UniversalDiveDataFormat.Models;
 
-public abstract class Drug
+public abstract class Drug: UddfModel
 {
 	[XmlElement("aliasname")]
 	public List<string> AliasNames { get; init; } = [];
@@ -21,8 +21,8 @@ public abstract class Drug
 }
 
 [XmlRoot("drink")]
-public class Drink : Drug;
+public class Drink: Drug;
 
 
 [XmlRoot("medicine")]
-public class Medicine : Drug;
+public class Medicine: Drug;

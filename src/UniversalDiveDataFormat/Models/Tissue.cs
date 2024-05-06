@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("tissue")]
-public class Tissue
+public class Tissue: UddfModel
 {
 	[XmlAttribute("gas")]
 	public required Gas Gas { get; init; } 

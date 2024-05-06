@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("exposuretoaltitude")]
-public class ExposureToAltitude
+public class ExposureToAltitude: UddfModel
 {
 	
 	[XmlElement("altitudeofexposure")]

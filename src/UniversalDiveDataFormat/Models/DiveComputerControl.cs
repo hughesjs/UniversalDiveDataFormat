@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("divecomputercontrol")]
-public class DiveComputerControl
+public class DiveComputerControl: UddfModel
 {
 	[XmlElement("divecomputerdump")]
 	public List<DiveComputerDump> DiveComputerDumps { get; init; } = [];

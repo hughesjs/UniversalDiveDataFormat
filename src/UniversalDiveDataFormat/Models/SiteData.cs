@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("sitedata")]
-public class SiteData
+public class SiteData: UddfModel
 {
 	[XmlElement("arealength")]
 	public float? AreaLengthInMeters { get; init; }

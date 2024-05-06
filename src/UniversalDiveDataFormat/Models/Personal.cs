@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("personal")]
-public class Personal
+public class Personal: UddfModel
 {
 	[XmlElement("birthdate")]
 	public BirthDate? BirthDate { get; init; }

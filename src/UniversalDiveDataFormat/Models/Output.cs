@@ -3,7 +3,7 @@ using System.Xml.Serialization;
 namespace UniversalDiveDataFormat.Models;
 
 [XmlRoot("output")]
-public class Output
+public class Output: UddfModel
 {
 	[XmlElement("lingo")]
 	public string? Lingo { get; init; }
