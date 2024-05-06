@@ -2,7 +2,7 @@ using System.Xml.Serialization;
 
 namespace UniversalDiveDataFormat.Models;
 
-public abstract class Drug
+public abstract class Drug: UddfModel
 {
 	[XmlElement("aliasname")]
 	public List<string> AliasNames { get; init; } = [];

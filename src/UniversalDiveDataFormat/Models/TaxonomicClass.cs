@@ -2,7 +2,7 @@ using System.Xml.Serialization;
 
 namespace UniversalDiveDataFormat.Models;
 
-public abstract class TaxonomicClass
+public abstract class TaxonomicClass: UddfModel
 {
 	[XmlElement("species")]
 	public List<Species> Species { get; init; } = [];

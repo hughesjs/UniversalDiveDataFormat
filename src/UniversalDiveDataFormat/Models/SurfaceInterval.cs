@@ -2,7 +2,7 @@ using System.Xml.Serialization;
 
 namespace UniversalDiveDataFormat.Models;
 
-public abstract class SurfaceInterval
+public abstract class SurfaceInterval: UddfModel
 {
 	[XmlElement("exposuretoaltitude")]
 	public ExposureToAltitude? ExposureToAltitude { get; init; }

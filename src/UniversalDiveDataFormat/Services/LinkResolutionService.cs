@@ -15,7 +15,7 @@ public class LinkResolutionService
 
 	private readonly bool _failOnMissingLink;
 	
-	private static bool IsInModelNamespace(Type t) => t.Namespace!.StartsWith("UniversalDiveDataFormat.Models");
+	private static bool IsInModelNamespace(Type t) => t.IsAssignableTo(typeof(UddfModel));
 	private static bool IsList(Type type) => type.IsGenericType && type.GetGenericTypeDefinition().IsAssignableTo(typeof(IEnumerable));
 	private static bool IsListOfModelObjects(Type type) => IsList(type) && IsInModelNamespace(type.GetGenericArguments().Single());
 
@@ -27,16 +27,10 @@ public class LinkResolutionService
 		_links = [];
 	}
 
-	public void ResolveAllLinksInObjectGraph(object root)
+	public void ResolveAllLinksInObjectGraph(UddfModel root)
 	{
 		_linkableLookup.Clear();
 		_links.Clear();
-		// Maybe make everything inherit from an empty base and use that rather than object
-		if (!IsInModelNamespace(root.GetType()))
-		{
-			throw new ArgumentException("The root object must belong to the UDDF Models namespace");
-		}
-
 		FindAllLinkablesAndLinksInSubgraph(root);
 		BuildLinks();
 	}
@@ -54,7 +48,7 @@ public class LinkResolutionService
 		}
 	}
 	
-	private void FindAllLinkablesAndLinksInSubgraph(object? root)
+	private void FindAllLinkablesAndLinksInSubgraph(UddfModel? root)
 	{
 		if (root is null) return;
 		PropertyInfo[] properties = root.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance | BindingFlags.GetProperty);
@@ -65,12 +59,12 @@ public class LinkResolutionService
 			if (propertyValue is null) continue;
 			if (IsListOfModelObjects(property.PropertyType))
 			{
-				((IEnumerable)propertyValue).Cast<object?>().ToList().ForEach(FindAllLinkablesAndLinksInSubgraph);
+				((IEnumerable)propertyValue).Cast<UddfModel?>().ToList().ForEach(FindAllLinkablesAndLinksInSubgraph);
 				continue;
 			}
 			
 			if (!IsInModelNamespace(property.PropertyType)) continue;
-			FindAllLinkablesAndLinksInSubgraph(propertyValue);
+			FindAllLinkablesAndLinksInSubgraph((UddfModel)propertyValue);
 		}
 	}
 	
